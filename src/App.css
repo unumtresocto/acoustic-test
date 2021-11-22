@@ -1,0 +1,23 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.app-header,
+.app-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.app-header__heading {
+  margin: 0;
+}
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import { ElementTypes } from "../../domain/elements";
-import DateTime from "./DateTime";
-import FormattedText from "./FormattedText";
-import Group from "./Group";
-import Image from "./Image";
-import Text from "./Text";
+import DateTime from "./DateTime/DateTime";
+import FormattedText from "./FormattedText/FormattedText";
+import Group from "./Group/Group";
+import Image from "./Image/Image";
+import Text from "./Text/Text";
 
 const RENDERERS = {
   [ElementTypes.TEXT]: Text,

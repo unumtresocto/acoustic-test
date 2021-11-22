@@ -1,8 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+jest.mock("./ui/Article/Article", () => {
+  return function Article() {
+    return <div>Dummy article</div>;
+  };
+});
+
+test("Renders app shell correctly", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const header = screen.getByText("acoustic test task");
+  const footer = screen.getByText("No rights reserved, really");
+  const article = screen.getByText("Dummy article");
+
+  expect(header).toBeInTheDocument();
+  expect(footer).toBeInTheDocument();
+  expect(article).toBeInTheDocument();
 });
